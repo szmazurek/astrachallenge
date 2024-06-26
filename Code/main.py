@@ -14,7 +14,8 @@ if __name__ == '__main__':
         amp = False,
         weight_decay = 1e-8,
         gradient_clipping = 1.0,
-        n_train = .8,
+        n_train = .85,
         val_freq = 20,
-        weights_loss=(1,0,1)
+        weights_loss=(1,0,1),
+        augment = False
     )

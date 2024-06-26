@@ -16,7 +16,7 @@ def evaluate(net, dataloader, device, amp, dice, epoch):
     num_val_batches = len(dataloader)
     dice_score = 0
     if not os.path.exists(f"./validation_results/Validation-ep={epoch}"):
-        os.mkdir(f"./validation_results/Validation-ep={epoch}")
+        os.makedirs(f"./validation_results/Validation-ep={epoch}")
     affine = np.eye(4)
 
     # iterate over the validation set

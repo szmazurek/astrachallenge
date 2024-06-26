@@ -29,7 +29,8 @@ def train_model(
         gradient_clipping: float = 1.0,
         n_train: float = .8,
         val_freq: int = 2,
-        weights_loss: tuple = (1, 1, 0)
+        weights_loss: tuple = (1, 1, 0),
+        augment: bool = False
 ):
     alpha, betta, gamma = weights_loss
     # Load data
@@ -40,7 +41,7 @@ def train_model(
     train_loader = DataLoader(
         train_set,
         shuffle=True,
-        **loader_args
+        **loader_args # Define some rigid body transformation
     )
     val_loader = DataLoader(
         val_set,
@@ -68,7 +69,7 @@ def train_model(
     experiment = wandb.init(project='U-Net', resume='allow', entity="joansano")
     experiment.config.update(
         dict(epochs=epochs, batch_size=batch_size, learning_rate=learning_rate,
-             val_freq=val_freq, save_checkpoint=save_checkpoint, amp=amp)
+             val_freq=val_freq, save_checkpoint=save_checkpoint, amp=amp, weights_loss=weights_loss)
     )
     logging.basicConfig(level=logging.INFO)
     logging.info(f'''Starting training:
@@ -80,7 +81,8 @@ def train_model(
         Validation freq: {val_freq}
         Checkpoints:     {save_checkpoint}
         Device:          {device.type}
-        Mixed Precision: {amp}
+        Mixed Precision: {amp},
+        Augmentation: {augment}
     ''')
 
     # Training loop
@@ -115,29 +117,32 @@ def train_model(
                 pbar.update(images.shape[0])
                 global_step += 1
                 epoch_loss += loss.item()
-                experiment.log({
+                """ experiment.log({
                     'train loss': loss.item(),
                     'step': global_step,
                     'epoch': epoch
-                })
+                }) """
                 pbar.set_postfix(**{'loss (batch)': loss.item()})
+        experiment.log({
+            'train loss': epoch_loss/len(train_set),
+            'step': global_step
+        })
 
         # Evaluation round
         division_step = epoch % val_freq
         if division_step == 0 or epoch==(epochs+1):
-                """ histograms = {}
-                for tag, value in model.named_parameters():
-                        tag = tag.replace('/', '.')
-                        if not (torch.isinf(value) | torch.isnan(value)).any():
-                                histograms['Weights/' + tag] = wandb.Histogram(value.data.cpu())
-                        if not (torch.isinf(value.grad) | torch.isnan(value.grad)).any():
-                                histograms['Gradients/' + tag] = wandb.Histogram(value.grad.data.cpu()) """
+            """ histograms = {}
+            for tag, value in model.named_parameters():
+                    tag = tag.replace('/', '.')
+                    if not (torch.isinf(value) | torch.isnan(value)).any():
+                            histograms['Weights/' + tag] = wandb.Histogram(value.data.cpu())
+                    if not (torch.isinf(value.grad) | torch.isnan(value.grad)).any():
+                            histograms['Gradients/' + tag] = wandb.Histogram(value.grad.data.cpu()) """
 
-                val_score = evaluate(model, val_loader, device, amp, dice, epoch)
-                scheduler.step(val_score)
-                experiment.log({
-                    'dice score': val_score,
-                    'step': global_step,
-                    'epoch': epoch
-                }, step=epoch)
-                logging.info('Validation Dice score: {}'.format(val_score))
+            val_score = evaluate(model, val_loader, device, amp, dice, epoch)
+            scheduler.step(val_score)
+            experiment.log({
+                'dice score': val_score,
+                'step': global_step
+            }, step=global_step)
+            logging.info('Validation Dice score: {}'.format(val_score))
