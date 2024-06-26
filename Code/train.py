@@ -37,7 +37,7 @@ def train_model(
     n_train = .8
     n_val = round(1 - n_train,2)
     train_set, val_set = load_data(train_size=n_train, test_size=n_val)
-    loader_args = dict(batch_size=batch_size, num_workers=os.cpu_count(), pin_memory=True)
+    loader_args = dict(batch_size=batch_size, num_workers=6, pin_memory=True)
     train_loader = DataLoader(
         train_set,
         shuffle=True,
