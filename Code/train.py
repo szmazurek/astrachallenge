@@ -50,7 +50,7 @@ def train_model(
         **loader_args)
 
     # Set up the optimizer, the loss, the learning rate scheduler and the loss scaling for AMP
-    optimizer = optim.Adam(
+    optimizer = optim.AdamW(
         model.parameters(),
         lr=learning_rate, 
         weight_decay=weight_decay)#, momentum=momentum, foreach=True)

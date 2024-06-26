@@ -2,3 +2,4 @@ catalyst_open_innovation_challenge/
 **pycache**
 validation_results/
 wandb/
+*env/
