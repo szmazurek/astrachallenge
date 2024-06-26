@@ -1,0 +1,264 @@
+INFO:root:Starting training:
+        Epochs:          100
+        Batch size:      6
+        Learning rate:   1e-05
+        Training size:   0.8
+        Validation size: 0.19999999999999996
+        Validation freq: 20
+        Checkpoints:     True
+        Device:          cuda
+        Mixed Precision: False
+Epoch 1/100:   0%|          | 0/21 [00:00<?, ?img/s]/net/tscratch/people/plgjoanfr97/conda-envs/astra/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 128 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Epoch 1/100: 100%|██████████| 21/21 [00:24<00:00,  1.14s/img, loss (batch)=nan]
+
+Epoch 2/100: 100%|██████████| 21/21 [00:06<00:00,  3.01img/s, loss (batch)=-6.98]
+
+
+Epoch 3/100: 100%|██████████| 21/21 [00:07<00:00,  2.95img/s, loss (batch)=-17.1]
+
+Epoch 4/100: 100%|██████████| 21/21 [00:07<00:00,  2.86img/s, loss (batch)=-10.2]
+
+Epoch 5/100: 100%|██████████| 21/21 [00:07<00:00,  2.91img/s, loss (batch)=-21.4]
+
+
+Epoch 6/100: 100%|██████████| 21/21 [00:07<00:00,  2.91img/s, loss (batch)=-9.87]
+
+Epoch 7/100: 100%|██████████| 21/21 [00:07<00:00,  2.93img/s, loss (batch)=-15.2]
+
+
+Epoch 8/100: 100%|██████████| 21/21 [00:07<00:00,  2.86img/s, loss (batch)=nan]
+
+Epoch 9/100: 100%|██████████| 21/21 [00:07<00:00,  2.93img/s, loss (batch)=nan]
+
+Epoch 10/100: 100%|██████████| 21/21 [00:07<00:00,  2.89img/s, loss (batch)=nan]
+
+
+Epoch 11/100: 100%|██████████| 21/21 [00:07<00:00,  2.87img/s, loss (batch)=nan]
+
+
+Epoch 12/100: 100%|██████████| 21/21 [00:07<00:00,  2.78img/s, loss (batch)=nan]
+
+Epoch 13/100: 100%|██████████| 21/21 [00:07<00:00,  2.88img/s, loss (batch)=-9.42]
+
+
+Epoch 14/100: 100%|██████████| 21/21 [00:07<00:00,  2.88img/s, loss (batch)=-17.6]
+
+Epoch 15/100: 100%|██████████| 21/21 [00:07<00:00,  2.87img/s, loss (batch)=-20.4]
+
+Epoch 16/100: 100%|██████████| 21/21 [00:07<00:00,  2.87img/s, loss (batch)=nan]
+
+
+Epoch 17/100: 100%|██████████| 21/21 [00:07<00:00,  2.88img/s, loss (batch)=nan]
+
+Epoch 18/100: 100%|██████████| 21/21 [00:07<00:00,  2.89img/s, loss (batch)=-14.9]
+
+Epoch 19/100: 100%|██████████| 21/21 [00:07<00:00,  2.88img/s, loss (batch)=nan]
+
+
+Epoch 20/100: 100%|██████████| 21/21 [00:07<00:00,  2.84img/s, loss (batch)=nan]
+
+INFO:root:Validation Dice score: 0.8515838384628296
+Epoch 21/100:   0%|          | 0/21 [00:00<?, ?img/s]wandb: WARNING Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+wandb: WARNING (User provided step: 20 is less than current step: 80. Dropping entry: {'dice score': 0.8515838384628296, 'step': 80, 'epoch': 20, '_timestamp': 1719394815.6656957}).
+Epoch 21/100: 100%|██████████| 21/21 [00:07<00:00,  2.87img/s, loss (batch)=-5.16]
+
+Epoch 22/100: 100%|██████████| 21/21 [00:07<00:00,  2.81img/s, loss (batch)=-6.98]
+
+
+Epoch 23/100: 100%|██████████| 21/21 [00:07<00:00,  2.80img/s, loss (batch)=nan]
+
+
+Epoch 24/100: 100%|██████████| 21/21 [00:07<00:00,  2.83img/s, loss (batch)=-7.75]
+
+Epoch 25/100: 100%|██████████| 21/21 [00:07<00:00,  2.82img/s, loss (batch)=-12.2]
+
+Epoch 26/100: 100%|██████████| 21/21 [00:07<00:00,  2.80img/s, loss (batch)=-9.59]
+
+
+Epoch 27/100: 100%|██████████| 21/21 [00:07<00:00,  2.85img/s, loss (batch)=nan]
+
+Epoch 28/100: 100%|██████████| 21/21 [00:07<00:00,  2.84img/s, loss (batch)=nan]
+
+Epoch 29/100: 100%|██████████| 21/21 [00:07<00:00,  2.80img/s, loss (batch)=nan]
+
+
+Epoch 30/100: 100%|██████████| 21/21 [00:07<00:00,  2.97img/s, loss (batch)=nan]
+
+Epoch 31/100: 100%|██████████| 21/21 [00:07<00:00,  2.93img/s, loss (batch)=-8.44]
+
+Epoch 32/100: 100%|██████████| 21/21 [00:07<00:00,  2.90img/s, loss (batch)=nan]
+
+
+Epoch 33/100: 100%|██████████| 21/21 [00:07<00:00,  2.92img/s, loss (batch)=-13.7]
+
+Epoch 34/100: 100%|██████████| 21/21 [00:07<00:00,  2.91img/s, loss (batch)=-3.03]
+
+
+Epoch 35/100: 100%|██████████| 21/21 [00:07<00:00,  2.76img/s, loss (batch)=nan]
+
+
+Epoch 36/100: 100%|██████████| 21/21 [00:07<00:00,  2.85img/s, loss (batch)=-19.8]
+
+Epoch 37/100: 100%|██████████| 21/21 [00:07<00:00,  2.86img/s, loss (batch)=nan]
+
+Epoch 38/100: 100%|██████████| 21/21 [00:07<00:00,  2.80img/s, loss (batch)=nan]
+
+
+Epoch 39/100: 100%|██████████| 21/21 [00:07<00:00,  2.78img/s, loss (batch)=-12.3]
+
+
+Epoch 40/100: 100%|██████████| 21/21 [00:07<00:00,  2.84img/s, loss (batch)=nan]
+
+INFO:root:Validation Dice score: 0.8891137838363647
+Epoch 41/100:   0%|          | 0/21 [00:00<?, ?img/s]wandb: WARNING (User provided step: 40 is less than current step: 160. Dropping entry: {'dice score': 0.8891137838363647, 'step': 160, 'epoch': 40, '_timestamp': 1719394977.2563765}).
+Epoch 41/100: 100%|██████████| 21/21 [00:07<00:00,  2.79img/s, loss (batch)=nan]
+
+Epoch 42/100: 100%|██████████| 21/21 [00:07<00:00,  2.86img/s, loss (batch)=nan]
+
+
+Epoch 43/100: 100%|██████████| 21/21 [00:07<00:00,  2.82img/s, loss (batch)=nan]
+
+
+Epoch 44/100: 100%|██████████| 21/21 [00:07<00:00,  2.73img/s, loss (batch)=-5.47]
+
+Epoch 45/100: 100%|██████████| 21/21 [00:07<00:00,  2.76img/s, loss (batch)=-3.35]
+
+Epoch 46/100: 100%|██████████| 21/21 [00:07<00:00,  2.91img/s, loss (batch)=-21]
+
+
+Epoch 47/100: 100%|██████████| 21/21 [00:07<00:00,  2.83img/s, loss (batch)=-4.86]
+
+Epoch 48/100: 100%|██████████| 21/21 [00:07<00:00,  2.88img/s, loss (batch)=-5.83]
+
+Epoch 49/100: 100%|██████████| 21/21 [00:07<00:00,  2.79img/s, loss (batch)=nan]
+
+
+Epoch 50/100: 100%|██████████| 21/21 [00:07<00:00,  2.84img/s, loss (batch)=-15.5]
+
+Epoch 51/100: 100%|██████████| 21/21 [00:07<00:00,  2.82img/s, loss (batch)=nan]
+
+Epoch 52/100: 100%|██████████| 21/21 [00:07<00:00,  2.82img/s, loss (batch)=-17.4]
+
+
+Epoch 53/100: 100%|██████████| 21/21 [00:07<00:00,  2.83img/s, loss (batch)=-3.75]
+
+
+Epoch 54/100: 100%|██████████| 21/21 [00:07<00:00,  2.84img/s, loss (batch)=nan]
+
+Epoch 55/100: 100%|██████████| 21/21 [00:07<00:00,  2.82img/s, loss (batch)=nan]
+
+Epoch 56/100: 100%|██████████| 21/21 [00:07<00:00,  2.81img/s, loss (batch)=nan]
+
+
+Epoch 57/100: 100%|██████████| 21/21 [00:07<00:00,  2.75img/s, loss (batch)=-12.1]
+
+
+Epoch 58/100: 100%|██████████| 21/21 [00:07<00:00,  2.84img/s, loss (batch)=nan]
+
+Epoch 59/100: 100%|██████████| 21/21 [00:07<00:00,  2.83img/s, loss (batch)=nan]
+
+Epoch 60/100: 100%|██████████| 21/21 [00:07<00:00,  2.90img/s, loss (batch)=-5.76]
+
+INFO:root:Validation Dice score: 0.9135896563529968
+Epoch 61/100:   0%|          | 0/21 [00:00<?, ?img/s]wandb: WARNING (User provided step: 60 is less than current step: 240. Dropping entry: {'dice score': 0.9135896563529968, 'step': 240, 'epoch': 60, '_timestamp': 1719395140.1145778}).
+
+Epoch 61/100: 100%|██████████| 21/21 [00:07<00:00,  2.86img/s, loss (batch)=nan]
+
+Epoch 62/100: 100%|██████████| 21/21 [00:07<00:00,  2.86img/s, loss (batch)=nan]
+
+Epoch 63/100: 100%|██████████| 21/21 [00:07<00:00,  2.70img/s, loss (batch)=nan]
+
+
+Epoch 64/100: 100%|██████████| 21/21 [00:07<00:00,  2.80img/s, loss (batch)=nan]
+
+
+Epoch 65/100: 100%|██████████| 21/21 [00:07<00:00,  2.81img/s, loss (batch)=-4.29]
+
+Epoch 66/100: 100%|██████████| 21/21 [00:07<00:00,  2.79img/s, loss (batch)=-14.8]
+
+Epoch 67/100: 100%|██████████| 21/21 [00:07<00:00,  2.79img/s, loss (batch)=-19.8]
+
+
+Epoch 68/100: 100%|██████████| 21/21 [00:07<00:00,  2.82img/s, loss (batch)=nan]
+
+
+Epoch 69/100: 100%|██████████| 21/21 [00:07<00:00,  2.82img/s, loss (batch)=nan]
+
+Epoch 70/100: 100%|██████████| 21/21 [00:07<00:00,  2.80img/s, loss (batch)=-8.07]
+
+Epoch 71/100: 100%|██████████| 21/21 [00:07<00:00,  2.83img/s, loss (batch)=-6.86]
+
+
+Epoch 72/100: 100%|██████████| 21/21 [00:07<00:00,  2.81img/s, loss (batch)=nan]
+
+
+Epoch 73/100: 100%|██████████| 21/21 [00:07<00:00,  2.71img/s, loss (batch)=-8.14]
+
+Epoch 74/100: 100%|██████████| 21/21 [00:07<00:00,  2.81img/s, loss (batch)=-15]
+
+Epoch 75/100: 100%|██████████| 21/21 [00:07<00:00,  2.78img/s, loss (batch)=nan]
+
+
+Epoch 76/100: 100%|██████████| 21/21 [00:07<00:00,  2.81img/s, loss (batch)=nan]
+
+
+Epoch 77/100: 100%|██████████| 21/21 [00:07<00:00,  2.83img/s, loss (batch)=nan]
+
+Epoch 78/100: 100%|██████████| 21/21 [00:07<00:00,  2.82img/s, loss (batch)=nan]
+
+Epoch 79/100: 100%|██████████| 21/21 [00:07<00:00,  2.79img/s, loss (batch)=-14.1]
+
+
+Epoch 80/100: 100%|██████████| 21/21 [00:07<00:00,  2.79img/s, loss (batch)=nan]
+Validation round: 100%|██████████| 1/1 [00:12<00:00, 12.86s/batch]
+Epoch 81/100:   0%|          | 0/21 [00:00<?, ?img/s]wandb: WARNING (User provided step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 81/100:  29%|██▊       | 6/21 [00:04<00:11,  1.27img/s, loss (batch)=-48.8]d step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 81/100: 100%|██████████| 21/21 [00:06<00:00,  4.63img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 82/100:   0%|          | 0/21 [00:00<?, ?img/s].86img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 82/100: 100%|██████████| 21/21 [00:05<00:00,  5.10img/s, loss (batch)=-1.97] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 83/100:   0%|          | 0/21 [00:00<?, ?img/s].15img/s, loss (batch)=-1.97] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 83/100:  86%|████████▌ | 18/21 [00:05<00:00,  4.47img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 84/100:   0%|          | 0/21 [00:00<?, ?img/s].21img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 84/100:  57%|█████▋    | 12/21 [00:04<00:02,  3.06img/s, loss (batch)=-26.7] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 85/100:   0%|          | 0/21 [00:00<?, ?img/s].25img/s, loss (batch)=-10.3] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 85/100:  29%|██▊       | 6/21 [00:03<00:09,  1.53img/s, loss (batch)=nan].3] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 85/100: 100%|██████████| 21/21 [00:05<00:00,  5.18img/s, loss (batch)=nan]3] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 86/100:   0%|          | 0/21 [00:00<?, ?img/s].21img/s, loss (batch)=nan]3] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 86/100: 100%|██████████| 21/21 [00:05<00:00,  5.13img/s, loss (batch)=-8.36] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 87/100:   0%|          | 0/21 [00:00<?, ?img/s].14img/s, loss (batch)=-8.36] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 87/100:  57%|█████▋    | 12/21 [00:04<00:02,  3.05img/s, loss (batch)=nan]6] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 88/100:   0%|          | 0/21 [00:00<?, ?img/s].21img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 88/100:  29%|██▊       | 6/21 [00:03<00:09,  1.53img/s, loss (batch)=nan]]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 88/100: 100%|██████████| 21/21 [00:05<00:00,  5.18img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 89/100:   0%|          | 0/21 [00:00<?, ?img/s].20img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 89/100: 100%|██████████| 21/21 [00:05<00:00,  5.14img/s, loss (batch)=-10.7] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 90/100:   0%|          | 0/21 [00:00<?, ?img/s].20img/s, loss (batch)=-10.7] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 90/100:  86%|████████▌ | 18/21 [00:05<00:00,  4.50img/s, loss (batch)=-29.9] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 91/100:   0%|          | 0/21 [00:00<?, ?img/s].24img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 91/100:  57%|█████▋    | 12/21 [00:04<00:02,  3.10img/s, loss (batch)=-20.7] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 92/100:   0%|          | 0/21 [00:00<?, ?img/s].31img/s, loss (batch)=-29.2] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 92/100:  57%|█████▋    | 12/21 [00:04<00:02,  3.21img/s, loss (batch)=nan]2] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 93/100:   0%|          | 0/21 [00:00<?, ?img/s].38img/s, loss (batch)=nan]2] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 93/100:  57%|█████▋    | 12/21 [00:04<00:02,  3.22img/s, loss (batch)=-80.2] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 94/100:   0%|          | 0/21 [00:00<?, ?img/s].39img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 94/100:  29%|██▊       | 6/21 [00:03<00:09,  1.63img/s, loss (batch)=nan]]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 94/100: 100%|██████████| 21/21 [00:05<00:00,  5.36img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 95/100:   0%|          | 0/21 [00:00<?, ?img/s].41img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 95/100:  29%|██▊       | 6/21 [00:03<00:09,  1.64img/s, loss (batch)=-22.9]  step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 95/100: 100%|██████████| 21/21 [00:05<00:00,  5.39img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 96/100:   0%|          | 0/21 [00:00<?, ?img/s].41img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 96/100:  29%|██▊       | 6/21 [00:03<00:09,  1.60img/s, loss (batch)=nan]]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 96/100: 100%|██████████| 21/21 [00:05<00:00,  5.33img/s, loss (batch)=-2.93] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 97/100:   0%|          | 0/21 [00:00<?, ?img/s].38img/s, loss (batch)=-2.93] step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 97/100: 100%|██████████| 21/21 [00:05<00:00,  5.39img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 98/100:   0%|          | 0/21 [00:00<?, ?img/s].37img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 98/100: 100%|██████████| 21/21 [00:05<00:00,  5.36img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 99/100:   0%|          | 0/21 [00:00<?, ?img/s].40img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 99/100: 100%|██████████| 21/21 [00:05<00:00,  5.37img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 100/100:   0%|          | 0/21 [00:00<?, ?img/s]41img/s, loss (batch)=nan]   step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Epoch 100/100:  86%|████████▌ | 18/21 [00:04<00:00,  4.71img/s, loss (batch)=-46.1]step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Validation round:   0%|          | 0/1 [00:00<?, ?batch/s]mg/s, loss (batch)=-3.12]step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+Validation round: 100%|██████████| 1/1 [00:11<00:00, 11.77s/batch]ss (batch)=-3.12]step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+INFO:root:Validation Dice score: 0.942927896976471                ss (batch)=-3.12]step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).
+INFO:root:Validation Dice score: 0.942927896976471                ss (batch)=-3.12]step: 80 is less than current step: 320. Dropping entry: {'dice score': 0.9305953979492188, 'step': 320, 'epoch': 80, '_timestamp': 1719395304.219715}).

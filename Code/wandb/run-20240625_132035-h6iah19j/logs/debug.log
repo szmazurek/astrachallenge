@@ -1,0 +1,29 @@
+2024-06-25 13:20:35,338 INFO    MainThread:1698996 [wandb_setup.py:_flush():76] Current SDK version is 0.17.3
+2024-06-25 13:20:35,338 INFO    MainThread:1698996 [wandb_setup.py:_flush():76] Configure stats pid to 1698996
+2024-06-25 13:20:35,338 INFO    MainThread:1698996 [wandb_setup.py:_flush():76] Loading settings from /net/people/plgrid/plgjoanfr97/.config/wandb/settings
+2024-06-25 13:20:35,338 INFO    MainThread:1698996 [wandb_setup.py:_flush():76] Loading settings from /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/settings
+2024-06-25 13:20:35,338 INFO    MainThread:1698996 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-06-25 13:20:35,338 INFO    MainThread:1698996 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-25 13:20:35,338 INFO    MainThread:1698996 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program_abspath': '/net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/main.py', 'program': '/net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/main.py'}
+2024-06-25 13:20:35,338 INFO    MainThread:1698996 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-25 13:20:35,338 INFO    MainThread:1698996 [wandb_init.py:_log_setup():520] Logging user logs to /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_132035-h6iah19j/logs/debug.log
+2024-06-25 13:20:35,339 INFO    MainThread:1698996 [wandb_init.py:_log_setup():521] Logging internal logs to /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_132035-h6iah19j/logs/debug-internal.log
+2024-06-25 13:20:35,339 INFO    MainThread:1698996 [wandb_init.py:init():560] calling init triggers
+2024-06-25 13:20:35,339 INFO    MainThread:1698996 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {}
+2024-06-25 13:20:35,339 INFO    MainThread:1698996 [wandb_init.py:init():610] starting backend
+2024-06-25 13:20:35,339 INFO    MainThread:1698996 [wandb_init.py:init():614] setting up manager
+2024-06-25 13:20:35,343 INFO    MainThread:1698996 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-06-25 13:20:35,348 INFO    MainThread:1698996 [wandb_init.py:init():622] backend started and connected
+2024-06-25 13:20:35,354 INFO    MainThread:1698996 [wandb_init.py:init():711] updated telemetry
+2024-06-25 13:20:35,355 INFO    MainThread:1698996 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-06-25 13:20:35,886 ERROR   MainThread:1698996 [wandb_init.py:init():770] encountered error: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2024-06-25 13:20:35,886 ERROR   MainThread:1698996 [wandb_init.py:init():1181] error in wandb.init()
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgjoanfr97/conda-envs/astra/lib/python3.12/site-packages/wandb/sdk/wandb_init.py", line 1171, in init
+    return wi.init()
+           ^^^^^^^^^
+  File "/net/tscratch/people/plgjoanfr97/conda-envs/astra/lib/python3.12/site-packages/wandb/sdk/wandb_init.py", line 776, in init
+    raise error
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2024-06-25 13:20:37,005 WARNING MsgRouterThr:1698996 [router.py:message_loop():77] message_loop has been closed

@@ -1,0 +1,209 @@
+2024-06-25 13:30:07,310 INFO    StreamThr :3913231 [internal.py:wandb_internal():85] W&B internal server running at pid: 3913231, started at: 2024-06-25 13:30:07.309691
+2024-06-25 13:30:07,311 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: status
+2024-06-25 13:30:07,317 INFO    WriterThread:3913231 [datastore.py:open_for_write():87] open: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/run-y3fvtsqq.wandb
+2024-06-25 13:30:07,318 DEBUG   SenderThread:3913231 [sender.py:send():379] send: header
+2024-06-25 13:30:07,318 DEBUG   SenderThread:3913231 [sender.py:send():379] send: run
+2024-06-25 13:30:07,320 INFO    SenderThread:3913231 [sender.py:_setup_resume():749] checking resume status for joansano/U-Net/y3fvtsqq
+2024-06-25 13:30:07,919 INFO    SenderThread:3913231 [dir_watcher.py:__init__():211] watching files in: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files
+2024-06-25 13:30:07,919 INFO    SenderThread:3913231 [sender.py:_start_run_threads():1188] run started: y3fvtsqq with start time 1719315007.310765
+2024-06-25 13:30:07,926 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: check_version
+2024-06-25 13:30:07,927 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: check_version
+2024-06-25 13:30:08,033 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: run_start
+2024-06-25 13:30:08,055 DEBUG   HandlerThread:3913231 [system_info.py:__init__():26] System info init
+2024-06-25 13:30:08,055 DEBUG   HandlerThread:3913231 [system_info.py:__init__():41] System info init done
+2024-06-25 13:30:08,055 INFO    HandlerThread:3913231 [system_monitor.py:start():194] Starting system monitor
+2024-06-25 13:30:08,056 INFO    SystemMonitor:3913231 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-25 13:30:08,056 INFO    HandlerThread:3913231 [system_monitor.py:probe():214] Collecting system info
+2024-06-25 13:30:08,056 INFO    SystemMonitor:3913231 [interfaces.py:start():188] Started cpu monitoring
+2024-06-25 13:30:08,056 INFO    SystemMonitor:3913231 [interfaces.py:start():188] Started disk monitoring
+2024-06-25 13:30:08,057 INFO    SystemMonitor:3913231 [interfaces.py:start():188] Started gpu monitoring
+2024-06-25 13:30:08,057 INFO    SystemMonitor:3913231 [interfaces.py:start():188] Started memory monitoring
+2024-06-25 13:30:08,058 INFO    SystemMonitor:3913231 [interfaces.py:start():188] Started network monitoring
+2024-06-25 13:30:08,123 DEBUG   HandlerThread:3913231 [system_info.py:probe():152] Probing system
+2024-06-25 13:30:08,125 DEBUG   HandlerThread:3913231 [gitlib.py:_init_repo():56] git repository is invalid
+2024-06-25 13:30:08,125 DEBUG   HandlerThread:3913231 [system_info.py:probe():200] Probing system done
+2024-06-25 13:30:08,125 DEBUG   HandlerThread:3913231 [system_monitor.py:probe():223] {'os': 'Linux-5.14.0-362.24.1.el9_3.x86_64-x86_64-with-glibc2.34', 'python': '3.12.4', 'heartbeatAt': '2024-06-25T11:30:08.123639', 'startedAt': '2024-06-25T11:30:07.299994', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'host': 't0037', 'username': 'plgjoanfr97', 'executable': '/net/tscratch/people/plgjoanfr97/conda-envs/astra/bin/python', 'cpu_count': 128, 'cpu_count_logical': 128, 'cpu_freq': {'current': 2534.29825, 'min': 1500.0, 'max': 2250.0}, 'cpu_freq_per_core': [{'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3229.566, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3233.333, 'min': 1500.0, 'max': 2250.0}, {'current': 3242.16, 'min': 1500.0, 'max': 2250.0}, {'current': 3241.04, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3241.582, 'min': 1500.0, 'max': 2250.0}, {'current': 3239.607, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3238.806, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3222.677, 'min': 1500.0, 'max': 2250.0}, {'current': 3218.036, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3223.694, 'min': 1500.0, 'max': 2250.0}, {'current': 3230.72, 'min': 1500.0, 'max': 2250.0}, {'current': 3231.096, 'min': 1500.0, 'max': 2250.0}, {'current': 3245.868, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3226.819, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3229.741, 'min': 1500.0, 'max': 2250.0}, {'current': 3247.368, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3246.696, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3245.945, 'min': 1500.0, 'max': 2250.0}, {'current': 3243.739, 'min': 1500.0, 'max': 2250.0}, {'current': 3243.344, 'min': 1500.0, 'max': 2250.0}, {'current': 3239.471, 'min': 1500.0, 'max': 2250.0}, {'current': 3238.67, 'min': 1500.0, 'max': 2250.0}, {'current': 3244.912, 'min': 1500.0, 'max': 2250.0}, {'current': 3249.418, 'min': 1500.0, 'max': 2250.0}, {'current': 3249.515, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3201.086, 'min': 1500.0, 'max': 2250.0}, {'current': 3085.115, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3229.319, 'min': 1500.0, 'max': 2250.0}, {'current': 3220.926, 'min': 1500.0, 'max': 2250.0}, {'current': 3218.032, 'min': 1500.0, 'max': 2250.0}, {'current': 3220.145, 'min': 1500.0, 'max': 2250.0}, {'current': 3239.482, 'min': 1500.0, 'max': 2250.0}, {'current': 3240.494, 'min': 1500.0, 'max': 2250.0}, {'current': 3244.724, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3239.355, 'min': 1500.0, 'max': 2250.0}, {'current': 3242.089, 'min': 1500.0, 'max': 2250.0}, {'current': 3211.544, 'min': 1500.0, 'max': 2250.0}, {'current': 3244.134, 'min': 1500.0, 'max': 2250.0}, {'current': 3237.799, 'min': 1500.0, 'max': 2250.0}, {'current': 3237.347, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3236.836, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3249.728, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}, {'current': 2250.0, 'min': 1500.0, 'max': 2250.0}], 'disk': {'/': {'total': 7.477489471435547, 'used': 4.120018005371094}}, 'gpu': 'NVIDIA A100-SXM4-40GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA A100-SXM4-40GB', 'memory_total': 42949672960}], 'memory': {'total': 1007.7360343933105}}
+2024-06-25 13:30:08,125 INFO    HandlerThread:3913231 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-25 13:30:08,125 INFO    HandlerThread:3913231 [system_monitor.py:probe():227] Publishing system info
+2024-06-25 13:30:08,125 DEBUG   HandlerThread:3913231 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-06-25 13:30:08,921 INFO    Thread-12 :3913231 [dir_watcher.py:_on_file_created():271] file/dir created: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/conda-environment.yaml
+2024-06-25 13:30:10,594 DEBUG   HandlerThread:3913231 [system_info.py:_save_conda():224] Saving conda packages done
+2024-06-25 13:30:10,597 INFO    HandlerThread:3913231 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-25 13:30:10,600 DEBUG   SenderThread:3913231 [sender.py:send():379] send: files
+2024-06-25 13:30:10,600 INFO    SenderThread:3913231 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-06-25 13:30:10,646 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: python_packages
+2024-06-25 13:30:10,646 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: python_packages
+2024-06-25 13:30:10,646 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-25 13:30:10,647 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:10,647 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: stop_status
+2024-06-25 13:30:10,908 DEBUG   SenderThread:3913231 [sender.py:send():379] send: telemetry
+2024-06-25 13:30:10,908 DEBUG   SenderThread:3913231 [sender.py:send():379] send: config
+2024-06-25 13:30:10,922 INFO    Thread-12 :3913231 [dir_watcher.py:_on_file_modified():288] file/dir modified: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/conda-environment.yaml
+2024-06-25 13:30:10,923 INFO    Thread-12 :3913231 [dir_watcher.py:_on_file_created():271] file/dir created: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/output.log
+2024-06-25 13:30:10,923 INFO    Thread-12 :3913231 [dir_watcher.py:_on_file_created():271] file/dir created: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/requirements.txt
+2024-06-25 13:30:10,923 INFO    Thread-12 :3913231 [dir_watcher.py:_on_file_created():271] file/dir created: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/wandb-metadata.json
+2024-06-25 13:30:11,342 INFO    wandb-upload_0:3913231 [upload_job.py:push():130] Uploaded file /net/tscratch/people/plgjoanfr97/slurm_jobdir/783306/tmp/tmp8fcnhv1qwandb/5f9dhftv-wandb-metadata.json
+2024-06-25 13:30:11,677 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:12,748 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:12,911 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: status_report
+2024-06-25 13:30:12,923 INFO    Thread-12 :3913231 [dir_watcher.py:_on_file_modified():288] file/dir modified: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/output.log
+2024-06-25 13:30:13,823 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:14,985 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:16,124 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:17,302 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:18,403 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:18,719 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: status_report
+2024-06-25 13:30:19,518 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:20,535 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:21,580 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:22,682 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:23,713 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:23,796 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: status_report
+2024-06-25 13:30:24,765 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:25,793 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-25 13:30:25,793 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: stop_status
+2024-06-25 13:30:25,834 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:26,819 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:28,053 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:29,034 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: status_report
+2024-06-25 13:30:29,580 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:30,179 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:31,190 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:31,480 DEBUG   SenderThread:3913231 [sender.py:send():379] send: exit
+2024-06-25 13:30:31,480 INFO    SenderThread:3913231 [sender.py:send_exit():586] handling exit code: 1
+2024-06-25 13:30:31,480 INFO    SenderThread:3913231 [sender.py:send_exit():588] handling runtime: 23
+2024-06-25 13:30:31,482 INFO    SenderThread:3913231 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-06-25 13:30:31,482 INFO    SenderThread:3913231 [sender.py:send_exit():594] send defer
+2024-06-25 13:30:31,482 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:31,482 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 0
+2024-06-25 13:30:31,483 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:31,483 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-06-25 13:30:31,483 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 1
+2024-06-25 13:30:31,483 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:31,483 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 1
+2024-06-25 13:30:31,483 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:31,483 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-06-25 13:30:31,483 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 2
+2024-06-25 13:30:31,483 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:31,483 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 2
+2024-06-25 13:30:31,483 INFO    HandlerThread:3913231 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-25 13:30:31,483 DEBUG   SystemMonitor:3913231 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-25 13:30:31,484 DEBUG   SystemMonitor:3913231 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-25 13:30:31,484 INFO    HandlerThread:3913231 [interfaces.py:finish():200] Joined cpu monitor
+2024-06-25 13:30:31,484 DEBUG   SystemMonitor:3913231 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-25 13:30:31,485 INFO    HandlerThread:3913231 [interfaces.py:finish():200] Joined disk monitor
+2024-06-25 13:30:31,497 INFO    HandlerThread:3913231 [interfaces.py:finish():200] Joined gpu monitor
+2024-06-25 13:30:31,497 INFO    HandlerThread:3913231 [interfaces.py:finish():200] Joined memory monitor
+2024-06-25 13:30:31,497 INFO    HandlerThread:3913231 [interfaces.py:finish():200] Joined network monitor
+2024-06-25 13:30:31,497 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:31,497 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-06-25 13:30:31,497 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 3
+2024-06-25 13:30:31,497 DEBUG   SenderThread:3913231 [sender.py:send():379] send: stats
+2024-06-25 13:30:31,497 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:31,498 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 3
+2024-06-25 13:30:31,498 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:31,498 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-06-25 13:30:31,498 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 4
+2024-06-25 13:30:31,498 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:31,498 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 4
+2024-06-25 13:30:31,498 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:31,498 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-06-25 13:30:31,498 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 5
+2024-06-25 13:30:31,498 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:31,498 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 5
+2024-06-25 13:30:31,498 DEBUG   SenderThread:3913231 [sender.py:send():379] send: summary
+2024-06-25 13:30:31,500 INFO    SenderThread:3913231 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-06-25 13:30:31,500 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:31,500 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-06-25 13:30:31,500 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 6
+2024-06-25 13:30:31,500 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:31,500 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 6
+2024-06-25 13:30:31,500 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:31,500 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-06-25 13:30:31,503 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: status_report
+2024-06-25 13:30:31,689 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 7
+2024-06-25 13:30:31,690 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:31,690 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 7
+2024-06-25 13:30:31,690 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:31,690 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-06-25 13:30:31,939 INFO    Thread-12 :3913231 [dir_watcher.py:_on_file_modified():288] file/dir modified: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/config.yaml
+2024-06-25 13:30:31,939 INFO    Thread-12 :3913231 [dir_watcher.py:_on_file_created():271] file/dir created: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/wandb-summary.json
+2024-06-25 13:30:32,480 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-25 13:30:32,918 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 8
+2024-06-25 13:30:32,918 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: poll_exit
+2024-06-25 13:30:32,918 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:32,919 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 8
+2024-06-25 13:30:32,919 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:32,919 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-06-25 13:30:32,919 INFO    SenderThread:3913231 [job_builder.py:build():440] Attempting to build job artifact
+2024-06-25 13:30:32,919 INFO    SenderThread:3913231 [job_builder.py:_get_source_type():580] no source found
+2024-06-25 13:30:32,920 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 9
+2024-06-25 13:30:32,920 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:32,920 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 9
+2024-06-25 13:30:32,920 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:32,920 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-06-25 13:30:32,920 INFO    SenderThread:3913231 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-25 13:30:32,939 INFO    Thread-12 :3913231 [dir_watcher.py:_on_file_modified():288] file/dir modified: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/output.log
+2024-06-25 13:30:32,939 INFO    SenderThread:3913231 [dir_watcher.py:finish():388] scan: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files
+2024-06-25 13:30:32,939 INFO    SenderThread:3913231 [dir_watcher.py:finish():402] scan save: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/wandb-summary.json wandb-summary.json
+2024-06-25 13:30:32,940 INFO    SenderThread:3913231 [dir_watcher.py:finish():402] scan save: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/config.yaml config.yaml
+2024-06-25 13:30:32,942 INFO    SenderThread:3913231 [dir_watcher.py:finish():402] scan save: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/output.log output.log
+2024-06-25 13:30:32,943 INFO    SenderThread:3913231 [dir_watcher.py:finish():402] scan save: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/conda-environment.yaml conda-environment.yaml
+2024-06-25 13:30:32,944 INFO    SenderThread:3913231 [dir_watcher.py:finish():402] scan save: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/wandb-metadata.json wandb-metadata.json
+2024-06-25 13:30:32,944 INFO    SenderThread:3913231 [dir_watcher.py:finish():402] scan save: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/requirements.txt requirements.txt
+2024-06-25 13:30:32,946 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 10
+2024-06-25 13:30:32,946 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:32,947 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 10
+2024-06-25 13:30:32,947 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:32,947 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-06-25 13:30:32,947 INFO    SenderThread:3913231 [file_pusher.py:finish():169] shutting down file pusher
+2024-06-25 13:30:33,376 INFO    wandb-upload_0:3913231 [upload_job.py:push():130] Uploaded file /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/wandb-summary.json
+2024-06-25 13:30:33,440 INFO    wandb-upload_2:3913231 [upload_job.py:push():130] Uploaded file /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/output.log
+2024-06-25 13:30:33,467 INFO    wandb-upload_1:3913231 [upload_job.py:push():130] Uploaded file /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/config.yaml
+2024-06-25 13:30:33,480 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-25 13:30:33,481 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: poll_exit
+2024-06-25 13:30:33,481 INFO    wandb-upload_4:3913231 [upload_job.py:push():130] Uploaded file /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/requirements.txt
+2024-06-25 13:30:33,494 INFO    wandb-upload_3:3913231 [upload_job.py:push():130] Uploaded file /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/files/conda-environment.yaml
+2024-06-25 13:30:33,694 INFO    Thread-11 (_thread_body):3913231 [sender.py:transition_state():614] send defer: 11
+2024-06-25 13:30:33,695 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:33,695 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 11
+2024-06-25 13:30:33,695 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:33,695 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-06-25 13:30:33,695 INFO    SenderThread:3913231 [file_pusher.py:join():175] waiting for file pusher
+2024-06-25 13:30:33,696 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 12
+2024-06-25 13:30:33,696 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:33,696 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 12
+2024-06-25 13:30:33,696 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:33,697 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-06-25 13:30:33,697 INFO    SenderThread:3913231 [file_stream.py:finish():601] file stream finish called
+2024-06-25 13:30:34,023 INFO    SenderThread:3913231 [file_stream.py:finish():605] file stream finish is done
+2024-06-25 13:30:34,023 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 13
+2024-06-25 13:30:34,023 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:34,023 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 13
+2024-06-25 13:30:34,024 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:34,024 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-06-25 13:30:34,024 INFO    SenderThread:3913231 [sender.py:transition_state():614] send defer: 14
+2024-06-25 13:30:34,024 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 13:30:34,024 DEBUG   SenderThread:3913231 [sender.py:send():379] send: final
+2024-06-25 13:30:34,024 INFO    HandlerThread:3913231 [handler.py:handle_request_defer():184] handle defer: 14
+2024-06-25 13:30:34,024 DEBUG   SenderThread:3913231 [sender.py:send():379] send: footer
+2024-06-25 13:30:34,024 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: defer
+2024-06-25 13:30:34,024 INFO    SenderThread:3913231 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-06-25 13:30:34,024 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-25 13:30:34,025 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: poll_exit
+2024-06-25 13:30:34,025 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: server_info
+2024-06-25 13:30:34,025 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: server_info
+2024-06-25 13:30:34,025 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-25 13:30:34,026 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: get_summary
+2024-06-25 13:30:34,026 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: sampled_history
+2024-06-25 13:30:34,026 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 13:30:34,169 DEBUG   SenderThread:3913231 [sender.py:send_request():406] send_request: poll_exit
+2024-06-25 13:30:34,170 INFO    MainThread:3913231 [wandb_run.py:_footer_history_summary_info():3991] rendering history
+2024-06-25 13:30:34,170 INFO    MainThread:3913231 [wandb_run.py:_footer_history_summary_info():4023] rendering summary
+2024-06-25 13:30:34,170 INFO    MainThread:3913231 [wandb_run.py:_footer_sync_info():3950] logging synced files
+2024-06-25 13:30:34,170 DEBUG   HandlerThread:3913231 [handler.py:handle_request():158] handle_request: shutdown
+2024-06-25 13:30:34,170 INFO    HandlerThread:3913231 [handler.py:finish():882] shutting down handler
+2024-06-25 13:30:35,026 INFO    WriterThread:3913231 [datastore.py:close():296] close: /net/tscratch/people/plgjoanfr97/Files/GitRepos/AstraZeneca/Code/wandb/run-20240625_133007-y3fvtsqq/run-y3fvtsqq.wandb
+2024-06-25 13:30:35,170 INFO    SenderThread:3913231 [sender.py:finish():1608] shutting down sender
+2024-06-25 13:30:35,170 INFO    SenderThread:3913231 [file_pusher.py:finish():169] shutting down file pusher
+2024-06-25 13:30:35,170 INFO    SenderThread:3913231 [file_pusher.py:join():175] waiting for file pusher

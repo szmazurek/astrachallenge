@@ -1,0 +1,175 @@
+INFO:root:Starting training:
+        Epochs:          50
+        Batch size:      4
+        Learning rate:   1e-05
+        Training size:   0.8
+        Validation size: 0.19999999999999996
+        Validation freq: 2
+        Checkpoints:     True
+        Device:          cuda
+        Mixed Precision: False
+Epoch 1/50:   0%|          | 0/21 [00:00<?, ?img/s]/net/tscratch/people/plgjoanfr97/conda-envs/astra/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 128 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Epoch 1/50: 100%|██████████| 21/21 [00:20<00:00,  1.04img/s, loss (batch)=nan]
+
+
+Epoch 2/50: 100%|██████████| 21/21 [00:05<00:00,  3.80img/s, loss (batch)=nan]
+INFO:root:Validation Dice score: 0.04000561684370041
+
+Epoch 3/50: 100%|██████████| 21/21 [00:05<00:00,  3.70img/s, loss (batch)=-3.86]
+
+Epoch 4/50: 100%|██████████| 21/21 [00:05<00:00,  3.53img/s, loss (batch)=-2.13]
+
+INFO:root:Validation Dice score: 0.12879443168640137
+
+
+Epoch 5/50: 100%|██████████| 21/21 [00:05<00:00,  3.63img/s, loss (batch)=0.187]
+
+
+Epoch 6/50: 100%|██████████| 21/21 [00:05<00:00,  3.60img/s, loss (batch)=0.417]
+
+INFO:root:Validation Dice score: 0.3846662640571594
+
+
+Epoch 7/50: 100%|██████████| 21/21 [00:05<00:00,  3.56img/s, loss (batch)=-1.42]
+
+
+Epoch 8/50: 100%|██████████| 21/21 [00:06<00:00,  3.48img/s, loss (batch)=nan]
+INFO:root:Validation Dice score: 0.4555036723613739
+
+
+Epoch 9/50: 100%|██████████| 21/21 [00:06<00:00,  3.22img/s, loss (batch)=nan]
+
+
+Epoch 10/50: 100%|██████████| 21/21 [00:06<00:00,  3.34img/s, loss (batch)=0.261]
+
+INFO:root:Validation Dice score: 0.5235092639923096
+
+
+Epoch 11/50: 100%|██████████| 21/21 [00:05<00:00,  3.59img/s, loss (batch)=-3.46]
+
+
+Epoch 12/50: 100%|██████████| 21/21 [00:06<00:00,  3.24img/s, loss (batch)=-0.101]
+
+INFO:root:Validation Dice score: 0.5795512795448303
+
+
+Epoch 13/50: 100%|██████████| 21/21 [00:06<00:00,  3.49img/s, loss (batch)=-2.03]
+
+
+Epoch 14/50: 100%|██████████| 21/21 [00:06<00:00,  3.44img/s, loss (batch)=0.149]
+
+INFO:root:Validation Dice score: 0.6312365531921387
+
+
+Epoch 15/50: 100%|██████████| 21/21 [00:06<00:00,  3.27img/s, loss (batch)=-0.000985]
+
+Epoch 16/50: 100%|██████████| 21/21 [00:06<00:00,  3.06img/s, loss (batch)=-0.499]
+INFO:root:Validation Dice score: 0.6759133338928223
+
+Epoch 17/50: 100%|██████████| 21/21 [00:06<00:00,  3.48img/s, loss (batch)=nan]
+
+Epoch 18/50: 100%|██████████| 21/21 [00:05<00:00,  3.75img/s, loss (batch)=nan]
+INFO:root:Validation Dice score: 0.7333334684371948
+
+Epoch 19/50: 100%|██████████| 21/21 [00:06<00:00,  3.40img/s, loss (batch)=nan]
+
+Epoch 20/50: 100%|██████████| 21/21 [00:06<00:00,  3.32img/s, loss (batch)=nan]
+INFO:root:Validation Dice score: 0.7895644307136536
+
+Epoch 21/50: 100%|██████████| 21/21 [00:05<00:00,  3.52img/s, loss (batch)=nan]
+
+Epoch 22/50: 100%|██████████| 21/21 [00:06<00:00,  3.37img/s, loss (batch)=nan]
+INFO:root:Validation Dice score: 0.8278237581253052
+
+Epoch 23/50: 100%|██████████| 21/21 [00:05<00:00,  3.59img/s, loss (batch)=nan]
+
+Epoch 24/50: 100%|██████████| 21/21 [00:05<00:00,  3.73img/s, loss (batch)=nan]
+
+INFO:root:Validation Dice score: 0.8613105416297913
+
+
+Epoch 25/50: 100%|██████████| 21/21 [00:05<00:00,  3.53img/s, loss (batch)=nan]
+
+
+Epoch 26/50: 100%|██████████| 21/21 [00:05<00:00,  3.65img/s, loss (batch)=-5.33]
+
+INFO:root:Validation Dice score: 0.8831074237823486
+
+
+Epoch 27/50: 100%|██████████| 21/21 [00:06<00:00,  3.31img/s, loss (batch)=0.0256]
+
+
+Epoch 28/50: 100%|██████████| 21/21 [00:05<00:00,  3.58img/s, loss (batch)=nan]
+
+INFO:root:Validation Dice score: 0.9144658446311951
+
+
+Epoch 29/50: 100%|██████████| 21/21 [00:05<00:00,  3.59img/s, loss (batch)=-6.52]
+
+
+Epoch 30/50: 100%|██████████| 21/21 [00:05<00:00,  3.54img/s, loss (batch)=nan]
+INFO:root:Validation Dice score: 0.9311557412147522
+
+Epoch 31/50: 100%|██████████| 21/21 [00:06<00:00,  3.25img/s, loss (batch)=nan]
+
+Epoch 32/50: 100%|██████████| 21/21 [00:05<00:00,  3.53img/s, loss (batch)=-12.9]
+INFO:root:Validation Dice score: 0.9397707581520081
+
+Epoch 33/50: 100%|██████████| 21/21 [00:05<00:00,  3.53img/s, loss (batch)=nan]
+
+Epoch 34/50: 100%|██████████| 21/21 [00:06<00:00,  3.26img/s, loss (batch)=nan]
+
+INFO:root:Validation Dice score: 0.942459225654602
+
+
+Epoch 35/50: 100%|██████████| 21/21 [00:05<00:00,  3.70img/s, loss (batch)=-0.513]
+
+
+Epoch 36/50: 100%|██████████| 21/21 [00:05<00:00,  3.67img/s, loss (batch)=-0.931]
+INFO:root:Validation Dice score: 0.9569924473762512
+
+
+Epoch 37/50: 100%|██████████| 21/21 [00:06<00:00,  3.36img/s, loss (batch)=nan]
+
+
+Epoch 38/50: 100%|██████████| 21/21 [00:06<00:00,  3.47img/s, loss (batch)=0.029]
+INFO:root:Validation Dice score: 0.9665937423706055
+
+
+Epoch 39/50: 100%|██████████| 21/21 [00:06<00:00,  3.16img/s, loss (batch)=-3.86]
+
+
+Epoch 40/50: 100%|██████████| 21/21 [00:05<00:00,  3.57img/s, loss (batch)=nan]
+INFO:root:Validation Dice score: 0.961053729057312
+
+Epoch 41/50: 100%|██████████| 21/21 [00:06<00:00,  3.34img/s, loss (batch)=nan]
+
+Epoch 42/50: 100%|██████████| 21/21 [00:06<00:00,  3.49img/s, loss (batch)=nan]
+INFO:root:Validation Dice score: 0.9710783958435059
+
+Epoch 43/50: 100%|██████████| 21/21 [00:05<00:00,  3.55img/s, loss (batch)=-2.97]
+
+
+Epoch 44/50: 100%|██████████| 21/21 [00:05<00:00,  3.67img/s, loss (batch)=-0.17]
+
+INFO:root:Validation Dice score: 0.9662265777587891
+
+
+Epoch 45/50: 100%|██████████| 21/21 [00:05<00:00,  3.65img/s, loss (batch)=-8.21]
+
+
+Epoch 46/50: 100%|██████████| 21/21 [00:05<00:00,  3.58img/s, loss (batch)=-2.84]
+INFO:root:Validation Dice score: 0.9571318626403809
+
+Epoch 47/50: 100%|██████████| 21/21 [00:06<00:00,  3.36img/s, loss (batch)=-0.874]
+
+Epoch 48/50: 100%|██████████| 21/21 [00:06<00:00,  3.46img/s, loss (batch)=nan]
+INFO:root:Validation Dice score: 0.9691371917724609
+
+Epoch 49/50: 100%|██████████| 21/21 [00:05<00:00,  3.56img/s, loss (batch)=-8.85]
+
+Epoch 50/50: 100%|██████████| 21/21 [00:06<00:00,  3.44img/s, loss (batch)=nan]
+
+
+INFO:root:Validation Dice score: 0.9725568890571594
