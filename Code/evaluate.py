@@ -15,8 +15,8 @@ def evaluate(net, dataloader, device, amp, dice, epoch):
     net.eval()
     num_val_batches = len(dataloader)
     dice_score = 0
-    if not os.path.exists(f"./Validation-ep={epoch}"):
-        os.mkdir(f"./Validation-ep={epoch}")
+    if not os.path.exists(f"./validation_results/Validation-ep={epoch}"):
+        os.mkdir(f"./validation_results/Validation-ep={epoch}")
     affine = np.eye(4)
 
     # iterate over the validation set
@@ -39,9 +39,9 @@ def evaluate(net, dataloader, device, amp, dice, epoch):
 
             N_imgs = image.shape[0]
             for img in range(N_imgs):
-                nib.save(nib.Nifti1Image(mask_pred[img].squeeze().cpu().numpy(), affine), f"./Validation-ep={epoch}/mask-pred_i={i}_b={img}.nii.gz")
-                nib.save(nib.Nifti1Image(mask_true[img].squeeze().cpu().numpy(), affine), f"./Validation-ep={epoch}/mask-true_i={i}_b={img}.nii.gz")
-                nib.save(nib.Nifti1Image(image[img].squeeze().cpu().numpy(), affine), f"./Validation-ep={epoch}/image_i={i}_b={img}.nii.gz")
+                nib.save(nib.Nifti1Image(mask_pred[img].squeeze().cpu().numpy(), affine), f"./validation_results/Validation-ep={epoch}/mask-pred_i={i}_b={img}.nii.gz")
+                nib.save(nib.Nifti1Image(mask_true[img].squeeze().cpu().numpy(), affine), f"./validation_results/Validation-ep={epoch}/mask-true_i={i}_b={img}.nii.gz")
+                nib.save(nib.Nifti1Image(image[img].squeeze().cpu().numpy(), affine), f"./validation_results/Validation-ep={epoch}/image_i={i}_b={img}.nii.gz")
                 fig, ax = plt.subplots(3,3,figsize=(15,15))
                 ax[0,0].set_title("Image")
                 ax[0,1].set_title("Predicted")
@@ -51,7 +51,7 @@ def evaluate(net, dataloader, device, amp, dice, epoch):
                     ax[j,1].imshow(mask_pred[img].squeeze().cpu()[:,:,3+j*2])
                     ax[j,2].imshow(mask_true[img].squeeze().cpu()[:,:,3+j*2])
                 fig.tight_layout()
-                plt.savefig(f"./Validation-ep={epoch}/image_i={i}_b={img}.png")
+                plt.savefig(f"./validation_results/Validation-ep={epoch}/image_i={i}_b={img}.png")
                 plt.close()
 
     net.train()
