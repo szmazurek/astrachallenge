@@ -3,3 +3,5 @@ catalyst_open_innovation_challenge/
 validation_results/
 wandb/
 *env/
+*.sh
+output_files/
