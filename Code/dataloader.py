@@ -53,12 +53,12 @@ def load_data(data_path, train_size=0.8, test_size=0.2):
 
 def load_data_no_split(data_path):
     data_dir = data_path 
-    masks_b = sorted(glob.glob(data_dir+"_labels/*baseline*"))
-    imgs_b = sorted(glob.glob(data_dir+"/*baseline*"))
-    masks_15 = sorted(glob.glob(data_dir+"_labels/*15*"))
-    imgs_15 = sorted(glob.glob(data_dir+"/*15*"))
-    masks_24 = sorted(glob.glob(data_dir+"_labels/*24*"))
-    imgs_24 = sorted(glob.glob(data_dir+"/*24*"))
+    masks_b = sorted(glob.glob(data_dir+"train_labels/*baseline*"))
+    imgs_b = sorted(glob.glob(data_dir+"train/*baseline*"))
+    masks_15 = sorted(glob.glob(data_dir+"train_labels/*15*"))
+    imgs_15 = sorted(glob.glob(data_dir+"train/*15*"))
+    masks_24 = sorted(glob.glob(data_dir+"train_labels/*24*"))
+    imgs_24 = sorted(glob.glob(data_dir+"train/*24*"))
 
     data_baseline, data_15, data_24 = [], [], []
     for i,j in zip(imgs_b, masks_b): 

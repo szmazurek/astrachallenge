@@ -25,7 +25,6 @@ if __name__ == '__main__':
             weights_loss=(1,0.75,0.25),
             augment = False,
             n_folds=n_folds,
-            grad_accumulation_steps=5
         )
     else:
         train_model(

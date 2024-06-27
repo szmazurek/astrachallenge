@@ -109,7 +109,9 @@ def train_model(
         if division_step == 0 or epoch==(epochs+1):
             val_score = evaluate(model, val_loader, device, amp, dice, epoch)
             scheduler.step(val_score)
-            logging.info('Validation Dice score: {}'.format(val_score))
+            logging.info('==================> Validation round')
+            logging.info('Validation Dice score: {}\n'.format(val_score))
+            logging.info('==================> Training procedure')
     if save is not None:
         state_dict = model.state_dict()
         torch.save(state_dict, save+"UNET.pth")
@@ -171,6 +173,7 @@ def train_model_kfold(
         
         # (Initialize logging)
         logging.basicConfig(level=logging.INFO)
+        logging.info("New fold starting")
         logging.info(f'''Starting training:
             Fold:            {fold+1}
             Epochs:          {epochs}
@@ -216,9 +219,10 @@ def train_model_kfold(
             logging.info(' --> Epoch {}/{} with loss: {}'.format(epoch, epochs, epoch_loss/len(train_loader)))
 
         # Evaluation round
+        logging.info('==================> Validating the fold')
         val_score = evaluate(model, val_loader, device, amp, dice, epoch, fold=fold+1)
         logging.info('Validation Dice score: {}'.format(val_score))
         if save_folds is not None:
             state_dict = model.state_dict()
-            torch.save(state_dict, save_folds+f"model_fold-{fold+1}.pth")
-            logging.info(f'Model saved!')
+            torch.save(state_dict, save_folds+f"UNET_fold-{fold+1}.pth")
+            logging.info(f'Model saved!\n')

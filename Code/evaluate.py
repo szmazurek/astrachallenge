@@ -23,7 +23,7 @@ def evaluate(net, dataloader, device, amp, dice, epoch, fold=None):
 
     # iterate over the validation set
     with torch.autocast(device.type if device.type != 'mps' else 'cpu', enabled=amp):
-        for i, batch in enumerate(tqdm(dataloader, total=num_val_batches, desc='Validation round', unit='batch', leave=False)):
+        for i, batch in enumerate(dataloader):
             image, mask_true = batch[0], batch[1]
 
             # move images and labels to correct device and type
