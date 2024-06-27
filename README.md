@@ -23,7 +23,7 @@ options:
   -h, --help       show this help message and exit
 ```
 
-## To compute segmentation masks using a trained model
+## Training mode
 In a bash terminal, in the correct directory type the following to get information about the training mode:
 ```shell
 user@user:~/astrachallnege/Code$ python tumorigenesis.py train --help
@@ -34,12 +34,13 @@ options:
   --configuration CONFIGURATION
                         Provide the path of the 'config.yaml' file with the training specifications
 ```
+### To train a model from scratch
 In the configuration file, you will find information about the parameters to train a new model from scratch. Have in mind that is better to have access to GPUs, otherwise the training will take significantly longer to converge. If the *config.yaml* file is located in the same directory as the rest of the code, to train a new model it is enough to type the following command in the terminal. Note that by doing this, you will use the same arguments as the submitted model.
 ```shell
 user@user:~/astrachallnege/Code$ python tumorigenesis.py train
 ```
 
-## To compute segmentation masks using a trained model	
+## Computing mode	
 In a bash terminal, in the correct directory type the following to get information about the computing mode:
 ```shell
 user@user:~/astrachallnege/Code$ python tumorigenesis.py compute --help
@@ -57,4 +58,7 @@ options:
                         Indicate the threshold to binarize the probability maps
   --device {cpu,cuda}   Run inference on CPU or GPU
 ```
-
+### To compute segmentation masks using a trained model	
+```shell
+python tumorigenesis.py compute $PLG_GROUPS_STORAGE/plggsano/Joan/AstraZeneca/catalyst_open_innovation_challenge/train/ ./validation_results/ UNET validation_results/test
+```
