@@ -19,7 +19,7 @@ def train_model(
         epochs: int = 5,
         batch_size: int = 2,
         learning_rate: float = 1e-5,
-        save_checkpoint: bool = True,
+        save: str = None,
         amp: bool = False,
         weight_decay: float = 1e-8,
         gradient_clipping: float = 1.0,
@@ -34,7 +34,7 @@ def train_model(
     train_set, val_set = load_data(data_path, train_size=n_train, test_size=n_val)
     if augment:
         train_set = augmentation(train_set)
-    loader_args = dict(batch_size=batch_size, num_workers=6, pin_memory=True)
+    loader_args = dict(batch_size=batch_size, num_workers=4, pin_memory=True)
     train_loader = DataLoader(
         train_set,
         shuffle=True,
@@ -67,7 +67,7 @@ def train_model(
         Training size:   {n_train}
         Validation size: {n_val}
         Validation freq: {val_freq}
-        Checkpoints:     {save_checkpoint}
+        Model saved to:     {save}
         Device:          {device.type}
         Mixed Precision: {amp},
         Augmentation: {augment}
@@ -110,7 +110,10 @@ def train_model(
             val_score = evaluate(model, val_loader, device, amp, dice, epoch)
             scheduler.step(val_score)
             logging.info('Validation Dice score: {}'.format(val_score))
-
+    if save is not None:
+        state_dict = model.state_dict()
+        torch.save(state_dict, save+"UNET.pth")
+        logging.info(f'Model saved!')
 
 def train_model_kfold(
         data_path,
@@ -120,13 +123,12 @@ def train_model_kfold(
         n_folds: int = 5,
         batch_size: int = 2,
         learning_rate: float = 1e-5,
-        save_checkpoint: bool = True,
+        save_folds: str = None,
         amp: bool = False,
         weight_decay: float = 1e-8,
         gradient_clipping: float = 1.0,
         weights_loss: tuple = (1, 1, 0),
         augment: bool = False,
-        grad_accumulation_steps: int = 1
 ):
     alpha, betta, gamma = weights_loss
     model_initial = deepcopy(model)   
@@ -134,7 +136,7 @@ def train_model_kfold(
     # Load data
     train_set_full = load_data_no_split(data_path)
     kfold = KFold(n_splits=n_folds, shuffle=True)
-    loader_args = dict(batch_size=batch_size, num_workers=6, pin_memory=True, prefetch_factor=3)
+    loader_args = dict(batch_size=batch_size, num_workers=4, pin_memory=True, prefetch_factor=3)
     for fold, (train_idx, test_idx) in enumerate(kfold.split(train_set_full)):
         model = deepcopy(model_initial)
         
@@ -175,7 +177,7 @@ def train_model_kfold(
             Batch size:      {batch_size}
             Fold:            {fold+1}
             Learning rate:   {learning_rate}
-            Checkpoints:     {save_checkpoint}
+            Saved models:     {save_folds}
             Device:          {device.type}
             Mixed Precision: {amp},
             Augmentation:    {augment}
@@ -216,3 +218,7 @@ def train_model_kfold(
         # Evaluation round
         val_score = evaluate(model, val_loader, device, amp, dice, epoch, fold=fold+1)
         logging.info('Validation Dice score: {}'.format(val_score))
+        if save_folds is not None:
+            state_dict = model.state_dict()
+            torch.save(state_dict, save_folds+f"model_fold-{fold+1}.pth")
+            logging.info(f'Model saved!')
