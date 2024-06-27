@@ -68,7 +68,7 @@ def train_model(
         Training size:   {n_train}
         Validation size: {n_val}
         Validation freq: {val_freq}
-        Model saved to:     {save}
+        Model saved to:  {save}
         Device:          {device.type}
         Mixed Precision: {amp},
         Augmentation: {augment}

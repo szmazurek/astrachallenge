@@ -1,0 +1,17 @@
+epochs: 100
+data_path: "/net/pr2/projects/plgrid/plggsano/Joan/AstraZeneca/catalyst_open_innovation_challenge/"
+device: "cuda"
+batch_size: 8
+learning_rate: 1e-5
+weight_decay: 1e-6
+save: "./validation_results/"
+gradient_clip: 1.0
+n_train: .9
+validation_frequency: 50
+threshold: 0.5
+augment: True 
+alpha: 1
+beta: .75
+gamma: .25
+n_folds: null
+grad_scaling_amp: False
