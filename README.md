@@ -60,5 +60,5 @@ options:
 ```
 ### To compute segmentation masks using a trained model	
 ```shell
-python tumorigenesis.py compute $PLG_GROUPS_STORAGE/plggsano/Joan/AstraZeneca/catalyst_open_innovation_challenge/train/ ./validation_results/ UNET validation_results/test
+python tumorigenesis.py compute testing-data-directory trained-model-location UNET results-directory
 ```
