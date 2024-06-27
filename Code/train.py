@@ -26,7 +26,8 @@ def train_model(
         n_train: float = .8,
         val_freq: int = 2,
         weights_loss: tuple = (1, 1, 0),
-        augment: bool = False
+        augment: bool = False,
+        threshold: float = 0.5
 ):
     alpha, betta, gamma = weights_loss
     # Load data
@@ -91,8 +92,8 @@ def train_model(
             
             masks_pred = model(images)
             loss = alpha*criterion(masks_pred, masks.float())
-            loss += betta*(1 - dice((F.sigmoid(masks_pred)>.5).int(), masks.int()))
-            loss += gamma*(1 - mcc((F.sigmoid(masks_pred)>.5).int(), masks.int()))
+            loss += betta*(1 - dice((F.sigmoid(masks_pred)>threshold).int(), masks.int()))
+            loss += gamma*(1 - mcc((F.sigmoid(masks_pred)>threshold).int(), masks.int()))
 
             optimizer.zero_grad(set_to_none=True)
             grad_scaler.scale(loss).backward()
@@ -107,7 +108,7 @@ def train_model(
         # Evaluation round
         division_step = epoch % val_freq
         if division_step == 0 or epoch==(epochs+1):
-            val_score = evaluate(model, val_loader, device, amp, dice, epoch)
+            val_score = evaluate(model, val_loader, device, amp, dice, epoch, th=threshold)
             scheduler.step(val_score)
             logging.info('==================> Validation round')
             logging.info('Validation Dice score: {}\n'.format(val_score))
@@ -131,6 +132,7 @@ def train_model_kfold(
         gradient_clipping: float = 1.0,
         weights_loss: tuple = (1, 1, 0),
         augment: bool = False,
+        threshold: float = 0.5
 ):
     alpha, betta, gamma = weights_loss
     model_initial = deepcopy(model)   
@@ -204,8 +206,8 @@ def train_model_kfold(
                 
                 masks_pred = model(images)
                 loss = alpha*criterion(masks_pred, masks.float())
-                loss += betta*(1 - dice((F.sigmoid(masks_pred)>.5).int(), masks.int()))
-                loss += gamma*(1 - mcc((F.sigmoid(masks_pred)>.5).int(), masks.int()))
+                loss += betta*(1 - dice((F.sigmoid(masks_pred)>threshold).int(), masks.int()))
+                loss += gamma*(1 - mcc((F.sigmoid(masks_pred)>threshold).int(), masks.int()))
 
                 grad_scaler.scale(loss).backward()
                 
@@ -220,7 +222,7 @@ def train_model_kfold(
 
         # Evaluation round
         logging.info('==================> Validating the fold')
-        val_score = evaluate(model, val_loader, device, amp, dice, epoch, fold=fold+1)
+        val_score = evaluate(model, val_loader, device, amp, dice, epoch, fold=fold+1, th=threshold)
         logging.info('Validation Dice score: {}'.format(val_score))
         if save_folds is not None:
             state_dict = model.state_dict()

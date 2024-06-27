@@ -9,7 +9,7 @@ import matplotlib.pylab as plt
 
 
 @torch.inference_mode()
-def evaluate(net, dataloader, device, amp, dice, epoch, fold=None):
+def evaluate(net, dataloader, device, amp, dice, epoch, fold=None, th=0.5):
     net.eval()
     num_val_batches = len(dataloader)
     dice_score = 0
@@ -34,7 +34,7 @@ def evaluate(net, dataloader, device, amp, dice, epoch, fold=None):
             mask_pred = net(image)
 
             assert mask_true.min() >= 0 and mask_true.max() <= 1, 'True mask indices should be in [0, 1]'
-            mask_pred = (F.sigmoid(mask_pred) > 0.5).int()
+            mask_pred = (F.sigmoid(mask_pred) > th).int()
             # compute the Dice score
             dice_score += dice(mask_pred, mask_true)
 

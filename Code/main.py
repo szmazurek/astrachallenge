@@ -24,7 +24,8 @@ if __name__ == '__main__':
             gradient_clipping = 1.0,
             weights_loss=(1,0.75,0.25),
             augment = False,
-            n_folds=n_folds,
+            n_folds = n_folds,
+            threshold = 0.5
         )
     else:
         train_model(
@@ -41,5 +42,6 @@ if __name__ == '__main__':
             n_train = .9,
             val_freq = 50,
             weights_loss=(1,0.75,0.25),
-            augment = False
+            augment = False,
+            threshold = 0.9
         )
