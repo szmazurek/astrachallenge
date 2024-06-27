@@ -57,7 +57,6 @@ def train_model(
     criterion = nn.CrossEntropyLoss() if model.n_classes > 1 else nn.BCEWithLogitsLoss()
     dice = Dice(zero_division=1e-6)
     mcc = BinaryMatthewsCorrCoef()
-    global_step = 0
     
     # (Initialize logging)
     logging.basicConfig(level=logging.INFO)
@@ -104,7 +103,6 @@ def train_model(
                 grad_scaler.update()
 
                 pbar.update(images.shape[0])
-                global_step += 1
                 epoch_loss += loss.item()
                 pbar.set_postfix(**{'loss (batch)': loss.item()})
 
@@ -170,11 +168,11 @@ def train_model_kfold(
         criterion = nn.CrossEntropyLoss() if model.n_classes > 1 else nn.BCEWithLogitsLoss()
         dice = Dice(zero_division=1e-6)
         mcc = BinaryMatthewsCorrCoef()
-        global_step = 0
         
         # (Initialize logging)
         logging.basicConfig(level=logging.INFO)
         logging.info(f'''Starting training:
+            Fold:            {fold+1}
             Epochs:          {epochs}
             Batch size:      {batch_size}
             Fold:            {fold+1}
@@ -182,46 +180,41 @@ def train_model_kfold(
             Checkpoints:     {save_checkpoint}
             Device:          {device.type}
             Mixed Precision: {amp},
-            Augmentation: {augment}
+            Augmentation:    {augment}
         ''')
 
         # Training loop
         model.to(device=device)
         dice.to(device)
         mcc.to(device)
-        with tqdm(total=epochs, desc=f'Epoch {epoch}/{epochs}', unit='img') as pbar:
-            for epoch in range(1, epochs + 1):
-                model.train()
-                epoch_loss = 0
-                for (images, masks) in train_loader:
-                    images = images.to(device=device, dtype=torch.float32)
-                    masks = masks.to(device=device, dtype=torch.long)
+        for epoch in range(1, epochs + 1):
+            model.train()
+            epoch_loss = 0
+            for (images, masks) in train_loader:
+                images = images.to(device=device, dtype=torch.float32)
+                masks = masks.to(device=device, dtype=torch.long)
 
-                    assert images.shape[1] == model.n_channels, \
-                            f'Network has been defined with {model.n_channels} input channels, ' \
-                            f'but loaded images have {images.shape[1]} channels. Please check that ' \
-                            'the images are loaded correctly.'
-                    
-                    masks_pred = model(images)
-                    loss = alpha*criterion(masks_pred, masks.float())
-                    loss += betta*(1 - dice((F.sigmoid(masks_pred)>.5).int(), masks.int()))
-                    loss += gamma*(1 - mcc((F.sigmoid(masks_pred)>.5).int(), masks.int()))
-                    #### GRAD ACCUMULATION
+                assert images.shape[1] == model.n_channels, \
+                        f'Network has been defined with {model.n_channels} input channels, ' \
+                        f'but loaded images have {images.shape[1]} channels. Please check that ' \
+                        'the images are loaded correctly.'
+                
+                masks_pred = model(images)
+                loss = alpha*criterion(masks_pred, masks.float())
+                loss += betta*(1 - dice((F.sigmoid(masks_pred)>.5).int(), masks.int()))
+                loss += gamma*(1 - mcc((F.sigmoid(masks_pred)>.5).int(), masks.int()))
 
-                    grad_scaler.scale(loss).backward()
-                    
-                    torch.nn.utils.clip_grad_norm_(model.parameters(), gradient_clipping)
-                    grad_scaler.unscale_(optimizer)
-                    grad_scaler.step(optimizer)
-                    grad_scaler.update()
-                    optimizer.zero_grad(set_to_none=True)
+                grad_scaler.scale(loss).backward()
+                
+                torch.nn.utils.clip_grad_norm_(model.parameters(), gradient_clipping)
+                grad_scaler.unscale_(optimizer)
+                grad_scaler.step(optimizer)
+                grad_scaler.update()
+                optimizer.zero_grad(set_to_none=True)
 
-
-                    global_step += 1
-                    epoch_loss += loss.item()
-            pbar.update(images.shape[0])
-            pbar.set_postfix(**{'loss (batch)': epoch_loss/epochs})
+                epoch_loss += loss.item()
+            logging.info('Epoch loss: {}'.format(epoch_loss/len(train_loader)))
 
         # Evaluation round
-        val_score = evaluate(model, val_loader, device, amp, dice, epoch, fold=fold)
+        val_score = evaluate(model, val_loader, device, amp, dice, epoch, fold=fold+1)
         logging.info('Validation Dice score: {}'.format(val_score))

@@ -22,7 +22,7 @@ if __name__ == '__main__':
             amp = False,
             weight_decay = 1e-6,
             gradient_clipping = 1.0,
-            weights_loss=(1,1,0),
+            weights_loss=(1,0.75,0.25),
             augment = False,
             n_folds=n_folds,
             grad_accumulation_steps=5
@@ -41,6 +41,6 @@ if __name__ == '__main__':
             gradient_clipping = 1.0,
             n_train = .9,
             val_freq = 50,
-            weights_loss=(1,1,1),
+            weights_loss=(1,0.75,0.25),
             augment = False
         )
