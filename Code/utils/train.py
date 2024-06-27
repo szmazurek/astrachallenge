@@ -9,8 +9,8 @@ from torchmetrics.classification import Dice, BinaryMatthewsCorrCoef
 from copy import deepcopy
 from sklearn.model_selection import KFold
 
-from evaluate import evaluate
-from dataloader import load_data, load_data_no_split, augmentation
+from utils.evaluate import evaluate
+from utils.dataloader import load_data, load_data_no_split, augmentation
 
 def train_model(
         data_path,

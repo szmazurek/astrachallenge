@@ -2,8 +2,8 @@ import argparse
 import yaml
 import os, glob
 from unet.unet_model import UNet
-from train import train_model, train_model_kfold
-from evaluate import compute_segmentation
+from utils.train import train_model, train_model_kfold
+from utils.evaluate import compute_segmentation
 import torch
 
 # Define argparse
