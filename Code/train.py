@@ -213,7 +213,7 @@ def train_model_kfold(
                 optimizer.zero_grad(set_to_none=True)
 
                 epoch_loss += loss.item()
-            logging.info('Epoch loss: {}'.format(epoch_loss/len(train_loader)))
+            logging.info(' --> Epoch {}/{} with loss: {}'.format(epoch, epochs, epoch_loss/len(train_loader)))
 
         # Evaluation round
         val_score = evaluate(model, val_loader, device, amp, dice, epoch, fold=fold+1)
