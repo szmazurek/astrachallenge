@@ -7,8 +7,6 @@ import nibabel as nib
 import numpy as np
 import matplotlib.pylab as plt
 
-from utils.dice_score import multiclass_dice_coeff, dice_coeff
-
 
 @torch.inference_mode()
 def evaluate(net, dataloader, device, amp, dice, epoch, fold=None):
@@ -16,7 +14,7 @@ def evaluate(net, dataloader, device, amp, dice, epoch, fold=None):
     num_val_batches = len(dataloader)
     dice_score = 0
     if fold is not None:
-        save_path = f"./validation_results/fold_{fold}/Validation-ep={epoch}"
+        save_path = f"./validation_results/fold_{fold}/"
     else:
         save_path = f"./validation_results/Validation-ep={epoch}"
     if not os.path.exists(save_path):
@@ -39,7 +37,6 @@ def evaluate(net, dataloader, device, amp, dice, epoch, fold=None):
             mask_pred = (F.sigmoid(mask_pred) > 0.5).int()
             # compute the Dice score
             dice_score += dice(mask_pred, mask_true)
-            #dice_score += dice_coeff(mask_pred, mask_true, reduce_batch_first=False)
 
             N_imgs = image.shape[0]
             for img in range(N_imgs):
