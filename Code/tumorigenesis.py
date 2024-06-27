@@ -37,7 +37,7 @@ if __name__ == '__main__':
             config = yaml.load(f, Loader=yaml.FullLoader)
         
         # Launch training
-        if config["n_folds"] is not None: # With cross validation
+        if config.get("n_folds",None) is not None: # With cross validation
             train_model_kfold(
                 data_path = config["data_path"], 
                 model = model,

@@ -7,7 +7,8 @@ user@user:~/astrachallnege/Code$ conda create -n env-name python=3.10
 user@user:~/astrachallnege/Code$ conda activate env-name
 user@user:~/astrachallnege/Code$ pip install -r requirements.txt --no-cache
 ```
-
+*WARNING!* The environment for training and testing was created with CUDA 12.1 installed. If your systems uses different versions of CUDA, please update --extra-index-url in requirements.txt accordingly
+to your CUDA version. The lists of index-urls for Pytorch with given CUDA version can be found here: https://pytorch.org/get-started/previous-versions/ .
 ### To  display needed arguments the main arguments
 ```shell
 user@user:~/astrachallnege/Code$ python tumorigenesis.py --help
