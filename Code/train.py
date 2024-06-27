@@ -80,31 +80,29 @@ def train_model(
     for epoch in range(1, epochs + 1):
         model.train()
         epoch_loss = 0
-        with tqdm(total=len(train_set), desc=f'Epoch {epoch}/{epochs}', unit='img') as pbar:
-            for (images, masks) in train_loader:
-                images = images.to(device=device, dtype=torch.float32)
-                masks = masks.to(device=device, dtype=torch.long)
+        for (images, masks) in train_loader:
+            images = images.to(device=device, dtype=torch.float32)
+            masks = masks.to(device=device, dtype=torch.long)
 
-                assert images.shape[1] == model.n_channels, \
-                        f'Network has been defined with {model.n_channels} input channels, ' \
-                        f'but loaded images have {images.shape[1]} channels. Please check that ' \
-                        'the images are loaded correctly.'
-                
-                masks_pred = model(images)
-                loss = alpha*criterion(masks_pred, masks.float())
-                loss += betta*(1 - dice((F.sigmoid(masks_pred)>.5).int(), masks.int()))
-                loss += gamma*(1 - mcc((F.sigmoid(masks_pred)>.5).int(), masks.int()))
+            assert images.shape[1] == model.n_channels, \
+                    f'Network has been defined with {model.n_channels} input channels, ' \
+                    f'but loaded images have {images.shape[1]} channels. Please check that ' \
+                    'the images are loaded correctly.'
+            
+            masks_pred = model(images)
+            loss = alpha*criterion(masks_pred, masks.float())
+            loss += betta*(1 - dice((F.sigmoid(masks_pred)>.5).int(), masks.int()))
+            loss += gamma*(1 - mcc((F.sigmoid(masks_pred)>.5).int(), masks.int()))
 
-                optimizer.zero_grad(set_to_none=True)
-                grad_scaler.scale(loss).backward()
-                grad_scaler.unscale_(optimizer)
-                torch.nn.utils.clip_grad_norm_(model.parameters(), gradient_clipping)
-                grad_scaler.step(optimizer)
-                grad_scaler.update()
+            optimizer.zero_grad(set_to_none=True)
+            grad_scaler.scale(loss).backward()
+            grad_scaler.unscale_(optimizer)
+            torch.nn.utils.clip_grad_norm_(model.parameters(), gradient_clipping)
+            grad_scaler.step(optimizer)
+            grad_scaler.update()
 
-                pbar.update(images.shape[0])
-                epoch_loss += loss.item()
-                pbar.set_postfix(**{'loss (batch)': loss.item()})
+            epoch_loss += loss.item()
+        logging.info(' --> Epoch {}/{} with loss: {}'.format(epoch, epochs, epoch_loss/len(train_loader)))
 
         # Evaluation round
         division_step = epoch % val_freq
